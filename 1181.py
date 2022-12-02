@@ -9,6 +9,12 @@ for _ in range(n):
 # 정렬하기 위해 list로 바꿔주자.
 word = list(word)
 
+# 길이 순으로 정렬해야하는데, 길이 2짜리 튜플 넣으면 어짜피 앞에 요소가 우선적으로 배열됨
 len_word = []
-for i in word:
-    len_word.append(len(i))
+for w in word:
+    len_word.append((len(w), w))
+
+sort_len_word = sorted(len_word)
+
+for length, w in sort_len_word:
+    print(w)
